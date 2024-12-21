@@ -12,9 +12,7 @@ pipeline {
       }
       stage('Build Artifact') {
             steps {
-             # sh "mvn clean package -DskipTests=true"
               sh 'mvn validate'
-              archive 'target/*.jar' 
             }  
        }
       stage('Test Maven - JUnit') {
